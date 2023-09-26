@@ -1,0 +1,70 @@
+:root {
+    --black: #0A0908;
+    --red: #49111C;
+    --white: #F2F4F3;
+    --light_brown: #A9927D;
+    --dark_brown: #5E503F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    background-color: var(--red);
+    color: var(--white);
+    height: 10vh;
+    width: 100vw;
+}
+
+header h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.oval {
+    background-color: var(--white);
+    width: 150px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--black);
+    text-align: center;
+    width: max-content;
+    height: max-content;
+}
+
+#home {
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+#About {
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}
+
+#Projects {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+}
+
+#Contact {
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+}
