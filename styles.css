@@ -1,23 +1,32 @@
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(style/font/PlayfairDisplay-Italic-VariableFont_wght.ttf),
+        url(style/font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
 :root {
-    --black: #0A0908;
-    --red: #49111C;
-    --white: #F2F4F3;
-    --light_brown: #A9927D;
-    --dark_brown: #5E503F;
+    --HeaderFooter: #31313179;
+    --HeaderText: #251111;
+    --Hover: #c7d8d0;
+    --bodyBackground: #A9927D;
+    --background: #5E503F;
+    --sectionColor: #866a45;
 }
 
 * {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: PlayfairDisplay;
 }
 
 header {
+    z-index: 1;
     display: grid;
     grid-template-rows: 50% 50%;
     position: fixed;
-    background-color: var(--red);
-    color: var(--white);
+    background-color: var(--HeaderFooter);
+    color: var(--black);
     height: 15vh;
     width: 100vw;
 }
@@ -35,38 +44,128 @@ header div {
 }
 
 header a {
+    font-size: 20px;
     display: flex;
-    background-color: var(--white);
-    border-radius: 50%;
+    border-radius: 30%;
     text-decoration: none;
     color: var(--black);
-    padding: 12px;
+    padding: 10px;
 }
 
 header a:hover {
-    background-color: var(--light_brown);
+    background-color: var(--bodyBackground);
 }
 
+main {
+    padding: 16vh 0 2vh 0;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+}
+
+main>div {
+    border-radius: 100px;
+    background-color: var(--bodyBackground);
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 25px 1px #000000ab;
+}
+
+
 #home {
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--black);
+    background-color: var(--sectionColor);
+    width: 70vw;
+    margin: 1% 5% 1% 5%;
+    padding: 1%;
+    height: 80vh;
+    border-radius: 1%;
+    display: grid;
+    grid-template-areas:
+        "img cvDownload"
+        "img text";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
+    justify-items: center;
+    align-items: center;
+}
+
+#home img {
+    grid-area: img;
+    border: 3px solid #ddd;
+    border-radius: 4px;
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cvLink {
+    grid-area: cvDownload;
+    width: 80%;
+    background-color: var(--background);
+    border-radius: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding: 1%;
+    box-shadow: 0px 0px 15px 1px #000000ab;
+}
+
+.cvLink a {
+    text-decoration: none;
+    color: var(--HeaderText);
+    background-color: var(--bodyBackground);
+    padding: 3% 7% 3% 7%;
+    border: thick double var(--HeaderText);
+}
+
+.cvLink a:hover {
+    background-color: var(--Hover);
+}
+
+#home>div {
+    padding: 4%;
+    grid-area: text;
 }
 
 #About {
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
+    background-color: var(--sectionColor);
+    width: 70vw;
+    margin: 1% 5% 1% 5%;
+    padding: 1%;
+    height: 80vh;
+    border-radius: 1%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
-#Projects {
-    width: 100vw;
-    height: 100vh;
-    background-color: blue;
+footer {
+    background-color: var(--background);
 }
 
-#Contact {
-    width: 100vw;
-    height: 100vh;
-    background-color: green;
+#infoPage {
+    display: grid;
+    grid-template-areas: "linkedin info github";
+    grid-template-columns: 20% 60% 20%;
+    justify-content: center;
+    z-index: 2;
+    background-color: var(--HeaderFooter);
+}
+
+#infoPage div {
+    padding: 3% 10% 3% 10%;
+    text-align: center;
+}
+
+#info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
