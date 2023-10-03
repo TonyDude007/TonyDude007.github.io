@@ -2,76 +2,483 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Portfolio Antoine</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Portfolio" />
+    <meta name="author" content="Antoine Ouellet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+
+    <title>Antoine Portfolio</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style/css/fontawesome.css" />
+    <link rel="stylesheet" href="style/css/templatemo-style.css" />
+    <link rel="stylesheet" href="style/css/owl.css" />
+    <link rel="stylesheet" href="style/css/lightbox.css" />
 </head>
 
 <body>
-
-    <header>
-        <h1> Antoine Ouellet </h1>
-        <div>
-            <span> <a href="#goToHome"> Home </a> </span>
-            <span> <a href="#About"> About </a> </span>
-            <span> <a href="#Projects"> Projects </a> </span>
-            <span> <a href="#Contact"> Contact </a> </span>
-        </div>
-    </header>
-
-    <main id="goToHome">
-        <div>
-            <section id="home">
-                <img src="style/photos/ProfilePic.jpg" alt="PhotoProfil">
-                <section class="cvLink">
-                    <a href="" download> Download Cv </a>
-                </section>
-                <div>
-                    <h3>Hello my name is Antoine Ouellet</h3><br>
-                    <h4>Upcoming FullStack Developper</h4>
-
-                    <p>
-                        I am 22 Years old, and finishing school in my program as a FullStack Developper, I am FLuent in
-                        French and English and i love to learn new things
-                    </p><br>
-
-                    <dl>
-                        <dt> Languages Used : </dt>
-                        <dd>- C</dd>
-                        <dd>- C++</dd>
-                        <dd>- Java</dd>
-                        <dd>- Html / Css / JavaScript</dd>
-                        <dd>- Android</dd>
-                        <dd>- Php</dd>
-                        <dd>- React</dd>
-                        <dd>- C# </dd>
-                    </dl>
+    <div id="page-wraper">
+        <!-- Sidebar Menu -->
+        <div class="responsive-nav">
+            <i class="fa fa-bars" id="menu-toggle"></i>
+            <div id="menu" class="menu">
+                <i class="fa fa-times" id="menu-close"></i>
+                <div class="container">
+                    <div class="image">
+                        <a href="#"><img src="style/images/author-image.jpg" alt="" /></a>
+                    </div>
+                    <div class="author-content">
+                        <h4>Antoine Ouellet</h4>
+                        <span>Upcoming FullStack Dev</span>
+                    </div>
+                    <nav class="main-nav" role="navigation">
+                        <ul class="main-menu">
+                            <li><a href="#section1">About Me</a></li>
+                            <li><a href="#section2">Strengths</a></li>
+                            <li><a href="#section3">Projects</a></li>
+                            <li><a href="#section4">Contact Me</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social-network">
+                        <ul class="soial-icons">
+                            <li>
+                                <a href="https://www.linkedin.com/in/antoine-ouellet-ab0225202/"><i
+                                        class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/TonyDude007"><i class="fa fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copyright-text">
+                        <p>Copyright 2023</p>
+                    </div>
                 </div>
-            </section>
-
-            <section id="About">
-
-            </section>
-
-            <section id="Projects"></section>
-            <section id="Contact"></section>
-        </div>
-    </main>
-
-    <footer>
-        <div id="infoPage">
-            <div>Linkedin</div>
-
-            <div id="info">
-                <span> Antoine Ouellet </span>
-                <span> Tonydude007@gmail.com </span>
-                <span> 438-398-9392 </span>
             </div>
-            <div>Github</div>
         </div>
-    </footer>
 
+        <section class="section about-me" data-section="section1">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>About Me</h2>
+                    <div class="line-dec"></div>
+                    <span>Hello, my name is Antoine Ouellet I am 22 years old and I am finishing school to become a
+                        FullStack Developper,
+                        during my formation we have seen multiple different languages and softwares.
+                    </span>
+                </div>
+                <div class="left-image-post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="left-image">
+                                <img src="style/images/ilya-pavlov-OqtafYT5kTw-unsplash.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="right-text">
+                                <h4>Languages Seen</h4>
+                                <p>
+                                <dl>
+                                    <dt> Languages Used : </dt>
+                                    <dd>- Java</dd>
+                                    <dd>- Html / Css / JavaScript</dd>
+                                    <dd>- Android</dd>
+                                    <dd> ...</dd>
+                                </dl>
+                                </p>
+                                <div class="white-button" onclick="openModal()">
+                                    <a href="#">Read More</a>
+                                </div>
+
+                                <!-- The Modal -->
+                                <div id="myModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <h4>Programming languages and Tools Used :</h4>
+                                        <div class="ExtraInfo">
+                                            <span id="languagesUsed">
+                                                <dl>
+                                                    <dt> Languages Used : </dt>
+                                                    <dd>- C</dd>
+                                                    <dd>- C++</dd>
+                                                    <dd>- Java</dd>
+                                                    <dd>- Html / Css / JavaScript</dd>
+                                                    <dd>- Android</dd>
+                                                    <dd>- Php</dd>
+                                                    <dd>- React</dd>
+                                                    <dd>- C# </dd>
+                                                </dl>
+                                            </span>
+                                            <span id="Softwares">
+                                                <dl>
+                                                    <dt> Tools Used : </dt>
+                                                    <dd>- SQL / SQLight</dd>
+                                                    <dd>- Node Js</dd>
+                                                    <dd>- Visual Studio</dd>
+                                                    <dd>- Visual Studio Code</dd>
+                                                    <dd>- Android Studio</dd>
+                                                    <dd>- NetBeans / Eclipse / Intelij</dd>
+                                                    <dd>- Linux / Windows</dd>
+                                                    <dd>- GitHub / BitBucket ...</dd>
+                                                </dl>
+                                            </span>
+                                        </div>
+                                        <span class="close" onclick="closeModal()">Click To CLose</span>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    function openModal() {
+                                        var modal = document.getElementById('myModal');
+                                        modal.style.display = 'block';
+                                    }
+
+                                    function closeModal() {
+                                        var modal = document.getElementById('myModal');
+                                        modal.style.display = 'none';
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-image-post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="left-text">
+                                <h4>Goal For Future</h4>
+                                <p>
+                                    My Goal is simple, to better myself and to simply surpass myself while also
+                                    Expanding my horizons as a FullStack Developper
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="right-image">
+                                <img id="images" src="style/images/kelly-sikkema--1_RZL8BGBM-unsplash.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section my-services" data-section="section2">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Why i would love to Become a FullStack Developper : </h2>
+                    <div class="line-dec"></div>
+                    <span> I Love the Aspect of Creating a Page or Website From Scratch, Starting with nothing but
+                        finishing with a fully finished Application/Website/WebPage.... </span>
+                </div>
+
+                <div class="section-heading">
+                    <h2>My Strenghts : </h2>
+                    <div class="line-dec"></div>
+                    <span></span>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="second-service-icon service-icon"></div>
+                            <h4> Front End </h4>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="second-service-icon service-icon"></div>
+                            <h4> Back End </h4>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="second-service-icon service-icon"></div>
+                            <h4>Mobile Apps</h4>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service-item">
+                            <div class="first-service-icon service-icon"></div>
+                            <h4> Creative thinking </h4>
+                            <p>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section my-work" data-section="section3">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>My Work</h2>
+                    <div class="line-dec"></div>
+                    <span></span>
+                </div>
+                <div class="row">
+                    <div class="isotope-wrapper">
+                        <form class="isotope-toolbar">
+                            <label><input type="radio" data-type="App" checked="" name="isotope-filter" />
+                                <span>Mobile App</span></label>
+                            <label><input type="radio" data-type="Team" name="isotope-filter" />
+                                <span>Team Project</span></label>
+                            <label><input type="radio" data-type="Solo" name="isotope-filter" />
+                                <span>Solo Project</span></label>
+                        </form>
+                        <div class="isotope-box">
+                            <div class="isotope-item" data-type="App">
+                                <figure class="snip1321">
+                                    <img src="style/images/SacTeam.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>The Sac Team</h4>
+                                        <span>Androind Studio & SQlite & React</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="Team">
+                                <figure class="snip1321">
+                                    <img src="style/images/SacTeam.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>The Sac Team</h4>
+                                        <span>Androind Studio & SQlite & React</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="App">
+                                <figure class="snip1321">
+                                    <img src="style/images/GymApp.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>GymApp</h4>
+                                        <span>Androind Studio & SQlite</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="Solo">
+                                <figure class="snip1321">
+                                    <img src="style/images/GymApp.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>GymApp</h4>
+                                        <span>Androind Studio & SQlite</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="Team">
+                                <figure class="snip1321">
+                                    <img src="style/images/SexShop.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>SexShop</h4>
+                                        <span>Html & Css</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="Team">
+                                <figure class="snip1321">
+                                    <img src="style/images/SpaceInvader2.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>Space Invader</h4>
+                                        <span>C++</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="Team">
+                                <figure class="snip1321">
+                                    <img src="style/images/MemoryGame.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>MemoryGame</h4>
+                                        <span>Php</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="Team">
+                                <figure class="snip1321">
+                                    <img src="style/images/Asperge.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>Asperge En Folie</h4>
+                                        <span>Html & Css</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="App">
+                                <figure class="snip1321">
+                                    <img src="style/images/MuscleBuddy.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>Muscle Buddy</h4>
+                                        <span>Androind Studio & SQlite</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="isotope-item" data-type="Solo">
+                                <figure class="snip1321">
+                                    <img src="style/images/MuscleBuddy.jpg" alt="sq-sample26" />
+                                    <figcaption>
+                                        <a href="style/images/Soon.jpg" data-lightbox="image-1" data-title="Caption"><i
+                                                class="fa fa-search"></i></a>
+                                        <h4>Muscle Buddy</h4>
+                                        <span>Androind Studio & SQlite</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-me" data-section="section4">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Contact Me</h2>
+                    <div class="line-dec"></div>
+                    <span>Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
+                        efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit.</span>
+                </div>
+                <div class="row">
+                    <div class="right-content">
+                        <div class="container">
+                            <form id="contact" action="send_email.php" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <input name="name" type="text" class="form-control" id="name"
+                                                placeholder="Your name..." required="" />
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <input name="email" type="text" class="form-control" id="email"
+                                                placeholder="Your email..." required="" />
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <input name="subject" type="text" class="form-control" id="subject"
+                                                placeholder="Subject..." required="" />
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <textarea name="message" rows="6" class="form-control" id="message"
+                                                placeholder="Your message..." required=""></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="button">
+                                                Send Message
+                                            </button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="style/js/isotope.min.js"></script>
+    <script src="style/js/owl-carousel.js"></script>
+    <script src="style/js/lightbox.js"></script>
+    <script src="style/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $(".main-menu li:first").addClass("active");
+
+        var showSection = function showSection(section, isAnimate) {
+            var direction = section.replace(/#/, ""),
+                reqSection = $(".section").filter(
+                    '[data-section="' + direction + '"]'
+                ),
+                reqSectionPos = reqSection.offset().top - 0;
+
+            if (isAnimate) {
+                $("body, html").animate(
+                    {
+                        scrollTop: reqSectionPos
+                    },
+                    800
+                );
+            } else {
+                $("body, html").scrollTop(reqSectionPos);
+            }
+        };
+
+        var checkSection = function checkSection() {
+            $(".section").each(function () {
+                var $this = $(this),
+                    topEdge = $this.offset().top - 80,
+                    bottomEdge = topEdge + $this.height(),
+                    wScroll = $(window).scrollTop();
+                if (topEdge < wScroll && bottomEdge > wScroll) {
+                    var currentId = $this.data("section"),
+                        reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+                    reqLink
+                        .closest("li")
+                        .addClass("active")
+                        .siblings()
+                        .removeClass("active");
+                }
+            });
+        };
+
+        $(".main-menu").on("click", "a", function (e) {
+            e.preventDefault();
+            showSection($(this).attr("href"), true);
+        });
+
+        $(window).scroll(function () {
+            checkSection();
+        });
+    </script>
 </body>
 
 </html>
