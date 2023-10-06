@@ -365,6 +365,14 @@
                 </div>
             </div>
         </section>
+        <script src="index.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("dSCFqpHV9tJCbqwxt");
+            })();
+        </script>
 
         <section class="section contact-me" data-section="section4">
             <div class="container">
@@ -381,7 +389,7 @@
                 <div class="row">
                     <div class="right-content">
                         <div class="container">
-                            <form id="contact" action="send_email.php" method="post">
+                            <div id="contact">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <fieldset>
@@ -409,13 +417,13 @@
                                     </div>
                                     <div class="col-md-12">
                                         <fieldset>
-                                            <button type="submit" id="form-submit" class="button">
+                                            <button type="submit" id="form-submit" class="button" onclick="sendMail()">
                                                 Send Message
                                             </button>
                                         </fieldset>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
