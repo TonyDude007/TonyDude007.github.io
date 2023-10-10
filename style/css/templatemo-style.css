@@ -64,6 +64,7 @@ h4 {
     border: 2px solid var(--ReadMoreMenuL);
     padding: 2%;
     margin-top: 2%;
+    border-radius: 10px;
 }
 
 img {
