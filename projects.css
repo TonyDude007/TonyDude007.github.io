@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --pageBackground: #695A43;
+    --ReadMoreMenuL: #C6B7A7;
+}
+
+body {
+    background-color: var(--pageBackground);
+    height: 100vh;
+    overflow: hidden;
+}
+
+#backgroundImage {
+    background-image: url(style/images/patrick-tomasso-5hvn-2WW6rY-unsplash.jpg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: ". content .";
+    height: 100vh;
+}
+
+#goBackBtn {
+    display: inline-block;
+    position: fixed;
+}
+
+#goBackBtn img {
+    width: 7vw;
+    height: auto;
+}
+
+.goBackText {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fc0000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    /* Positions the Text */
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+#goBackBtn:hover .goBackText {
+    visibility: visible;
+}
+
+#projectInfo {
+    padding: 1% 2%;
+    color: rgb(255, 255, 255);
+    margin-top: 1.5%;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.699);
+
+    height: 90vh;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+        "h1 h1 h1 "
+        "img description description"
+        "img info btn";
+    text-align: center;
+    align-items: center;
+}
+
+#dynamicH1 {
+    grid-area: h1;
+    font-size: 48px;
+    text-align: center;
+}
+
+#dynamicImgContainer {
+    grid-area: img;
+}
+
+#dynamicImg {
+    max-width: 60%;
+    height: auto;
+}
+
+#dynamicDescription {
+    grid-area: description;
+    font-size: large;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#info {
+    grid-area: info;
+    font-size: large;
+}
+
+#info div {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#dynamicGitHub {
+    text-decoration: none;
+    font-size: larger;
+    background-color: var(--ReadMoreMenuL);
+    color: var(--pageBackground);
+    padding: 2% 5%;
+    border-radius: 20px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <link rel="stylesheet" href="projects.css" />
+</head>
+
+<body>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        const paramName = urlParams.keys().next().value;
+    </script>
+
+    <div id="backgroundImage">
+
+        <div id="goBackBtn">
+            <a href="index.html" target="_self"> <img src="style/images/red-go-back-arrow.png" alt="GoBackBtn" />
+            </a>
+            <span class="goBackText">Go Back</span>
+        </div>
+
+        <section id="projectInfo">
+            <h1 id="dynamicH1">Error Change Page</h1>
+
+            <div id="dynamicImgContainer">
+                <img id="dynamicImg" src="style/images/SpaceInvader2.jpg" alt="Project Image">
+            </div>
+
+            <section id="dynamicDescription">
+                .
+            </section>
+
+            <section id="info">
+                <div> Project Type = <b id="dynamicProjectType"> Solo </b> </div>
+                <div id="teamMembers"> Team Members = <b id="dynamicTeamMembers"> . </b> </div>
+                <div> Technologies = <b id="dynamicTechnologies"> . </b> </div>
+            </section>
+
+            <div id="dynamicGitHubBtn">
+                <a id="dynamicGitHub" href="" target="_blank"> GitHub </a>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        const dynamicH1 = document.getElementById('dynamicH1');
+        const dynamicImg = document.getElementById('dynamicImg');
+        const dynamicDescription = document.getElementById('dynamicDescription');
+        const dynamicProjectType = document.getElementById('dynamicProjectType');
+        const dynamicTeamMembers = document.getElementById('dynamicTeamMembers');
+        const teamMembers = document.getElementById('teamMembers');
+        const dynamicTechnologies = document.getElementById('dynamicTechnologies');
+        const dynamicGitHubCodeBtn = document.getElementById('dynamicGitHub');
+
+        switch (paramName) {
+            case 'sacteam':
+                dynamicH1.textContent = "Sac Team";
+                dynamicImg.src = 'style/images/SacTeam.jpg';
+                dynamicDescription.textContent = "This is a E-Commerce web site with an Mobile Device application, which we were asked to do in class. This was a team project, i was mostly tasked with doing the Mobile application in this project";
+                dynamicProjectType.textContent = "Team";
+                dynamicTeamMembers.textContent = " Evan / Taoufik / Charles / Sara";
+                dynamicTechnologies.textContent = " Android Studio / Java / React / Html / Css";
+                dynamicGitHubCodeBtn.href = "https://github.com/TonyDude007/SacTeam";
+                break;
+            case 'gymapp':
+                dynamicH1.textContent = "Gym App";
+                dynamicImg.src = 'style/images/GymApp.jpg';
+                dynamicDescription.textContent = "This mobile application is an upgraded version of the one before, simply with additional features and everything works better. this applcation was designed with the purpose of remembering your weights used at the gym for everyexercise and for as many users as you wish. so it gives the ability to keep track of other peoples progress too.";
+                dynamicProjectType.textContent = "Solo";
+                teamMembers.style.display = "none";
+                dynamicTechnologies.textContent = " Android Studio / Java ";
+                dynamicGitHubCodeBtn.href = "https://github.com/TonyDude007/Gym_app";
+                break;
+            case 'musclebuddy':
+                dynamicH1.textContent = "Muscle Buddy";
+                dynamicImg.src = 'style/images/MuscleBuddy.jpg';
+                dynamicDescription.textContent = "This is the first version of my gym application";
+                dynamicProjectType.textContent = "Solo";
+                teamMembers.style.display = "none";
+                dynamicTechnologies.textContent = " Android Studio / Java ";
+                dynamicGitHubCodeBtn.href = "https://github.com/TonyDude007/MuscleBuddy";
+                break;
+            case 'sexshop':
+                dynamicH1.textContent = "Sex Shop";
+                dynamicImg.src = 'style/images/SexShop.jpg';
+                dynamicDescription.textContent = "This is an E-Commerce site we did in class. we could chose any topic and me and my team decided to do a sex shop, this website is fully responsive to all sizes of devices.";
+                dynamicProjectType.textContent = "Team";
+                dynamicTeamMembers.textContent = " Evan / Arnold";
+                dynamicTechnologies.textContent = " Html / Css";
+                dynamicGitHubCodeBtn.href = "https://github.com/TonyDude007/SexShop";
+                break;
+            case 'spaceinvader':
+                dynamicH1.textContent = "Space Invader";
+                dynamicImg.src = 'style/images/SpaceInvader2.jpg';
+                dynamicDescription.textContent = "This is a small little game we had to create in class using C++, it was created in teams of 3.";
+                dynamicProjectType.textContent = "Team";
+                dynamicTeamMembers.textContent = " Evan / Taoufik ";
+                dynamicTechnologies.textContent = " C++ ";
+                dynamicGitHubCodeBtn.href = "https://github.com/TonyDude007/SpaceInvader";
+                break;
+            case 'memorygame':
+                dynamicH1.textContent = "Memory Game";
+                dynamicImg.src = 'style/images/MemoryGame.jpg';
+                dynamicDescription.textContent = "This is a memory game created using php, the goal of this game is simple find the matching pairs and get more points, the goal is too get the highest highscore.";
+                dynamicProjectType.textContent = "Team";
+                dynamicTeamMembers.textContent = "Arona";
+                dynamicTechnologies.textContent = " Php / Html / Css";
+                dynamicGitHubCodeBtn.href = "https://github.com/TonyDude007/MemoryGame";
+                break;
+            case 'aspergeenfolie':
+                dynamicH1.textContent = "Asperge en Folie";
+                dynamicImg.src = 'style/images/Asperge.jpg';
+                dynamicDescription.textContent = "The Web page Asperge en folie is a web page for lots of different recipes in which asparagus was used in the recipe, fully responsive.";
+                dynamicProjectType.textContent = "Team";
+                dynamicTeamMembers.textContent = "Saliou";
+                dynamicTechnologies.textContent = "Html / Css";
+                dynamicGitHubCodeBtn.href = "https://github.com/TonyDude007/AspergeEnFolie";
+                break;
+        }
+    </script>
+</body>
+
+</html>
