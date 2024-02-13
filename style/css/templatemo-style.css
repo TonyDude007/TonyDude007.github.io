@@ -58,6 +58,8 @@ h4 {
 }
 
 .CvButton {
+    text-shadow: 2px 2px 10px #000000;
+    box-shadow: 2px 2px 10px 2px #000000;
     text-decoration: none;
     color: white;
     background-color: var(--pageBackground);
@@ -65,6 +67,32 @@ h4 {
     padding: 2%;
     margin-top: 2%;
     border-radius: 10px;
+    margin: 5%;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: var(--pageBackground);
+        border: 2px solid var(--ReadMoreMenuL);
+        color: #ffffff;
+    }
+
+    50% {
+        background-color: var(--ReadMoreMenuL);
+        border: 2px solid var(--pageBackground);
+        color: #000000;
+    }
+
+    100% {
+        background-color: var(--pageBackground);
+        border: 2px solid var(--ReadMoreMenuL);
+        color: #ffffff;
+    }
+}
+
+.CvButton:hover {
+    text-decoration: none;
+    animation: colorChange 2s infinite;
 }
 
 img {
@@ -929,6 +957,8 @@ section.contact-me {
     .isotope-item {
         border-bottom: none;
         text-align: center;
+        width: auto;
+        height: auto;
     }
 
     .isotope-toolbar {
@@ -942,6 +972,10 @@ section.contact-me {
 
     .modal-content {
         width: 80%;
+    }
+
+    #strenghts {
+        flex-direction: column;
     }
 }
 
